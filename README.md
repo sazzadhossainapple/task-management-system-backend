@@ -1,6 +1,6 @@
 # Task Management System (Backend)
 
-## 1️⃣ Clone the repository
+1️⃣ Clone the repository
 
 ```bash
 git clone https://github.com/sazzadhossainapple/task-management-system-backend
