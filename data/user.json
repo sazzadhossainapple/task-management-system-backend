@@ -1,0 +1,12 @@
+[
+  {
+    "name": "John Doe",
+    "email": "admin@app.com",
+    "password": "password",
+    "phone": "039338888",
+    "image": "",
+    "role": "Admin",
+    "address": "Dhaka",
+    "status": true
+  }
+]
