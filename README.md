@@ -1,5 +1,7 @@
 # Task Management System (Backend)
 
+# Tacnology Stack : Node.js, Express.js, MongoDB, Mongoose, JWT
+
 ```bash
 
 1️⃣ Clone the repository
