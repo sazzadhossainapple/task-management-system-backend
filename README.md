@@ -30,5 +30,9 @@ Password: password
 npm run dev
 The app will run on the default port (usually http://localhost:5000).
 
+6️⃣ Use swagger docs
+
+http://localhost:5000/api-docs
+
 
 ```
