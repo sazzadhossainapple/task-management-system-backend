@@ -28,7 +28,7 @@ Password: password
 5️⃣ Run the application
 
 npm run dev
-The app will run on the default port (usually http://localhost:5000).
+The app will run on the default port (usually http://localhost:8000).
 
 6️⃣ Use swagger docs
 

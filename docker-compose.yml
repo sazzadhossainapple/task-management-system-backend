@@ -4,7 +4,7 @@ services:
     app:
         build: .
         ports:
-            - '5000:5000'
+            - '8000:8000'
         environment:
             - DATABASE_LOCAL=mongodb://mongo:27017/task-management
             - PORT=5000
