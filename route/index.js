@@ -2,8 +2,12 @@ const express = require('express');
 const router = express.Router();
 
 const userRoute = require('./user.route');
+const taskRoute = require('./task.route');
 
-const routes = [{ path: '/user', handler: userRoute }];
+const routes = [
+    { path: '/user', handler: userRoute },
+    { path: '/task', handler: taskRoute },
+];
 
 routes.map((route) => router.use(route?.path, route?.handler));
 
