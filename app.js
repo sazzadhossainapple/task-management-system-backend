@@ -6,6 +6,7 @@ const handleErrors = require('./middleware/error');
 const { apiResponse } = require('./middleware');
 const errorLogger = require('./logger');
 const handleRequest = require('./middleware/handleRequest');
+const swaggerDocs = require('./swagger');
 
 //middlewares
 app.use(express.json());
@@ -15,6 +16,8 @@ app.use(handleRequest);
 app.use(apiResponse);
 
 configureRoutes(app);
+// swagger docs
+swaggerDocs(app);
 app.use(errorLogger());
 app.use(handleErrors);
 
