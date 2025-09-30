@@ -32,7 +32,7 @@ The app will run on the default port (usually http://localhost:8000).
 
 6️⃣ Use swagger docs
 
-http://localhost:5000/api-docs
+http://localhost:8000/api-docs
 
 
 ```
