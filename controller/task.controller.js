@@ -21,6 +21,11 @@ const { GeneralError } = require('../utils/error');
 const index = asyncWrapper(async (req, res, next) => {
     let filters = {};
 
+    // If user is not Admin, only show their own tasks
+    if (req.user.role !== 'Admin') {
+        filters.assignedUser = req?.user?._id;
+    }
+
     // Status filter (Pending, In Progress, Completed)
     if (req.query.status) {
         filters.status = req.query.status;
