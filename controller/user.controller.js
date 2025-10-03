@@ -70,7 +70,7 @@ const index = asyncWrapper(async (req, res, next) => {
 const store = asyncWrapper(async (req, res, next) => {
     await uploadFile(req, res);
 
-    const { name, email, password, phone, role } = req.body;
+    const { name, email, password, phone, role, address } = req.body;
 
     const oldUser = await findUserByEmail(email);
 
@@ -82,6 +82,7 @@ const store = asyncWrapper(async (req, res, next) => {
         email,
         image: req.file ? `images/${req.file.filename}` : '',
         password,
+        address,
         role,
         phone,
     });
