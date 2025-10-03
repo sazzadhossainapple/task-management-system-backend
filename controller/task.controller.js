@@ -1,3 +1,4 @@
+const moment = require('moment');
 const asyncWrapper = require('../middleware/asyncWrapper');
 const {
     getAllTaskServices,
@@ -31,16 +32,14 @@ const index = asyncWrapper(async (req, res, next) => {
         filters.status = req.query.status;
     }
 
-    // Due date filter (tasks due on a specific date)
-    if (req.query.dueDate) {
-        const dueDate = new Date(req.query.dueDate);
-        // Match tasks where dueDate is the same day
-        const nextDay = new Date(dueDate);
-        nextDay.setDate(nextDay.getDate() + 1);
+    // Date range filter
+    if (req.query.fromDate && req.query.toDate) {
+        const fromDate = moment(req.query.fromDate).startOf('day').toDate();
+        const toDate = moment(req.query.toDate).endOf('day').toDate();
 
         filters.dueDate = {
-            $gte: dueDate,
-            $lt: nextDay,
+            $gte: fromDate,
+            $lte: toDate,
         };
     }
 
